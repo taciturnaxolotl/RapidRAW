@@ -281,7 +281,7 @@ This project began as an intensive sprint to build the core functionality. Here'
 
 ## Getting Started
 
-You have two options to run RapidRAW:
+You have several options to run RapidRAW:
 
 **1. Download the Latest Release (Recommended)**
 
@@ -302,6 +302,27 @@ npm install
 # 3. Build and run the application in development mode
 # Use --release for a build that runs much faster (image loading etc.)
 npx tauri dev --release
+```
+
+**3. Using Nix**
+
+```bash
+# Direct installation with flakes enabled
+nix profile install github:CyberTimon/RapidRAW
+```
+
+For use in your own flake:
+
+```nix
+# In your flake.nix
+{
+  inputs.rapidraw.url = "github:CyberTimon/RapidRAW";
+
+  outputs = { self, nixpkgs, rapidraw, ... }: {
+    # Access the package as:
+    # rapidraw.packages.${system}.default
+  };
+}
 ```
 
 ## Contributing
