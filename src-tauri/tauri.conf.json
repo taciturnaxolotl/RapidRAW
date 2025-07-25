@@ -21,12 +21,15 @@
     ],
     "security": {
       "csp": null,
-      "capabilities": ["default"]
+      "capabilities": [
+        "default"
+      ]
     },
     "macOSPrivateApi": true
   },
   "bundle": {
     "active": true,
+    "category": "Photography",
     "targets": "all",
     "icon": [
       "icons/32x32.png",
